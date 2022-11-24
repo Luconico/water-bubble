@@ -6,5 +6,44 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: #111;
+  position: relative;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.water-bubble {
+  width: 40vw;
+  height: 40vw;
+  background-color: #4d8eff;
+  border-radius: 50%;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation: wave 2s ease-in-out infinite;
+          animation: wave 2s ease-in-out infinite;
+}
+
+@-webkit-keyframes wave {
+  from, to {
+    -webkit-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
+  }
+  50% {
+    -webkit-transform: translate(-50%, -20%);
+            transform: translate(-50%, -20%);
+  }
+}
+
+@keyframes wave {
+  from, to {
+    -webkit-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
+  }
+  50% {
+    -webkit-transform: translate(-50%, -20%);
+            transform: translate(-50%, -20%);
+  }
 }
 /*# sourceMappingURL=style.css.map */

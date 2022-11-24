@@ -6,4 +6,29 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: #111;
+    position: relative;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.water-bubble {
+    width:  40vw;
+    height: 40vw;
+    background-color: rgb(77, 142, 255);
+    border-radius: 50%;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: wave 2s ease-in-out infinite;
+}
+
+@keyframes wave {
+    from, to {
+        transform: translate(-50%, 0%);
+    }
+
+    50% {
+        transform: translate(-50%, -20%);
+    }
 }
